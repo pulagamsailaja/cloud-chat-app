@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☁️ Cloud Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">☁️ Cloud Chat</div>
+
+    <div id="userArea" class="user-area">
+      <button id="themeToggle" class="theme-btn">🌙</button>
+      <button id="openLogin" class="login-btn">Login</button>
+
+      <div id="profileWrapper" class="profile-wrapper" style="display:none;">
+        <div id="avatar" class="avatar"></div>
+        <span id="userDisplay"></span>
+
+        <!-- MENU -->
+        <div id="profileMenu" class="profile-menu">
+          <p id="viewProfile">View Profile</p>
+          <p id="addBio">Add Bio</p>
+          <p id="changeUsername">Change Username</p>
+          <p id="addProfilePic">Add Profile Picture</p>
+          <p id="logoutBtn">Logout</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="loginPopup" class="modal">
+    <div class="modal-content">
+      <h2>Welcome 👋</h2>
+      <p>Login to start chatting</p>
+
+      <button class="social-btn google" id="googleLogin">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" width="20">
+        Sign in with Google
+      </button>
+
+      <button class="social-btn github" id="githubLogin">
+        <img src="https://www.svgrepo.com/show/512317/github-142.svg" width="20">
+        Sign in with GitHub
+      </button>
+
+      <h5 id="forgotPassword" class="close-btn1">Forgot Password?</h5>
+      <button id="closePopup" class="close-btn">✖ Close</button>
+    </div>
+  </div>
+
+  <!-- CHAT SECTION -->
+  <div id="chatSection" class="chat-container" style="display:none;">
+    <div id="statusText" class="status-text">🟢 Online</div>
+
+    <div class="user-select-container">
+      <label for="userSelect">Private Chat:</label>
+      <select id="userSelect">
+        <option value="">-- Select User --</option>
+      </select>
+    </div>
+
+    <div class="group-select-container">
+      <label for="groupSelect">Select Group:</label>
+      <select id="groupSelect">
+        <option value="general">General</option>
+        <option value="friends">Friends</option>
+        <option value="work">Work</option>
+      </select>
+      <input type="text" id="newGroupName" placeholder="New group name">
+      <button id="createGroupBtn">➕ Create</button>
+    </div>
+
+    <div id="typingIndicator" class="typing-indicator"></div>
+    <div id="messages" class="messages"></div>
+
+    <div class="input-area">
+      <input type="text" id="messageInput" placeholder="Type a message...">
+      <input type="file" id="imageUpload" accept="image/*" style="display:none;">
+      <button id="imageBtn">📷</button>
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- PROFILE POPUP -->
+  <div id="profilePopup" class="modal">
+    <div class="modal-content" style="width:320px;">
+      <h3>Edit Profile</h3>
+      <label>Username</label>
+      <input id="editUsername" type="text" placeholder="Enter new username">
+      <label>Bio</label>
+      <textarea id="editBio" placeholder="Tell something about yourself"></textarea>
+      <label>Profile Picture</label>
+      <input id="editPic" type="file" accept="image/*">
+      <button id="saveProfileBtn" class="social-btn github">Save</button>
+      <button id="closeProfilePopup" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
