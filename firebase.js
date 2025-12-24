@@ -10,13 +10,14 @@ import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/fireb
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyCtuK5pb4JKkzwKQlskh4i49l1Os4YUOpI",
-  authDomain: "cloud-chat-app-34362.firebaseapp.com",
-  databaseURL: "https://cloud-chat-app-34362-default-rtdb.firebaseio.com/",
-  projectId: "cloud-chat-app-34362",
-  storageBucket: "cloud-chat-app-34362.appspot.com",
-  messagingSenderId: "914636111049",
-  appId: "1:914636111049:web:9239bcce6380684be8a118"
+  /* At $ sign, use your own details of the cloud*/
+  apiKey: "$",
+  authDomain: "$",
+  databaseURL: "$",
+  projectId: "$",
+  storageBucket: "$",
+  messagingSenderId: "$",
+  appId: "$"
 };
 
 // Initialize Firebase
